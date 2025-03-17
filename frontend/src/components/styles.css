@@ -1,0 +1,198 @@
+/* Comment List Styles */
+.comment-list {
+    margin-top: 2rem;
+  }
+  
+.no-comments {
+color: #666;
+font-style: italic;
+}
+
+/* Comment Styles */
+.comment {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+.comment-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1rem;
+}
+
+.comment-author {
+display: flex;
+align-items: center;
+}
+
+.author-image {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+object-fit: cover;
+margin-right: 0.75rem;
+}
+
+.comment-meta {
+font-size: 0.85rem;
+color: #666;
+}
+
+.comment-date {
+margin-right: 1rem;
+}
+
+.comment-likes {
+color: #e74c3c;
+}
+
+.comment-body {
+margin-bottom: 1rem;
+}
+
+.edit-textarea {
+width: 100%;
+min-height: 80px;
+padding: 0.5rem;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-family: inherit;
+font-size: inherit;
+}
+
+.comment-actions {
+display: flex;
+justify-content: flex-end;
+gap: 0.5rem;
+}
+
+.action-btn {
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 4px;
+background-color: #3498db;
+color: white;
+cursor: pointer;
+font-size: 0.9rem;
+transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+background-color: #2980b9;
+}
+
+.action-btn:disabled {
+background-color: #95a5a6;
+cursor: not-allowed;
+}
+
+.edit-btn {
+background-color: #3498db;
+}
+
+.edit-btn:hover {
+background-color: #2980b9;
+}
+
+.save-btn {
+background-color: #2ecc71;
+}
+
+.save-btn:hover {
+background-color: #27ae60;
+}
+
+.cancel-btn {
+background-color: #7f8c8d;
+}
+
+.cancel-btn:hover {
+background-color: #636e72;
+}
+
+.delete-btn {
+background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+background-color: #c0392b;
+}
+
+/* Comment Form Styles */
+.comment-form-container {
+background-color: #f9f9f9;
+border-radius: 8px;
+padding: 1.5rem;
+margin-bottom: 2rem;
+}
+
+.comment-form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.comment-input {
+width: 100%;
+min-height: 100px;
+padding: 0.75rem;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-family: inherit;
+font-size: inherit;
+resize: vertical;
+}
+
+.image-input {
+width: 100%;
+padding: 0.75rem;
+border: 1px solid #ddd;
+border-radius: 4px;
+}
+
+.submit-btn {
+align-self: flex-end;
+padding: 0.75rem 1.5rem;
+border: none;
+border-radius: 4px;
+background-color: #2ecc71;
+color: white;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+background-color: #27ae60;
+}
+
+.submit-btn:disabled {
+background-color: #95a5a6;
+cursor: not-allowed;
+}
+
+/* App Styles */
+.app {
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem;
+}
+
+.app-header {
+text-align: center;
+margin-bottom: 2rem;
+}
+
+.loading, .error {
+text-align: center;
+padding: 2rem;
+font-size: 1.2rem;
+}
+
+.error {
+color: #e74c3c;
+}
