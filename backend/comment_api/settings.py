@@ -20,10 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8z)rpn9@kwjzjoago495()u2-op$=p36e=ci2&)^iq$$2c!nes'
+import os
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+
 
 ALLOWED_HOSTS = []
 
@@ -53,7 +57,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True  # For development only
+# CORS_ALLOW_ALL_ORIGINS = True  # For development only
+CORS_ALLOWED_ORIGINS = ['https://yourfrontend.com',]
 
 ROOT_URLCONF = 'comment_api.urls'
 
@@ -82,9 +87,9 @@ WSGI_APPLICATION = 'comment_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'comment_db',
-        'USER': 'be_dev',
-        'PASSWORD': 'secure_db',
+        'NAME': 'your db',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
         'HOST': 'localhost',
         'PORT': '5432',
     }
